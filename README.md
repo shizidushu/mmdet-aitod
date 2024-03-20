@@ -1,3 +1,12 @@
+
+# 训练
+```bash
+cd mmdet-nwdrka
+python tools/train.py configs_nwdrka/nwd_rka/smoking_194_faster_r50_nwdrka_200.py
+```
+
+
+
 # TODbox (Tiny Object Detection Box)
 **We have now released the full sets (trainval, test) of AI-TOD-v2!** [[Download]](https://drive.google.com/drive/folders/1Er14atDO1cBraBD4DSFODZV1x7NHO_PY?usp=sharing)
 

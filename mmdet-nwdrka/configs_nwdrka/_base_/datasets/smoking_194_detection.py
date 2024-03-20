@@ -1,5 +1,6 @@
+# dataset settings
 dataset_type = 'AITODv2Dataset'
-data_root = '/mnt/d/0-Datasets/public/AI-TOD/aitodtoolkit/aitod/'
+data_root = '/mnt/d/0-Datasets/private/smoking/smoking-194/exported_coco/'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 train_pipeline = [
@@ -32,17 +33,20 @@ data = dict(
     workers_per_gpu=2,
     train=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/aitodv2_trainval.json',
-        img_prefix=data_root + 'images/trainval/',
+        classes=('smoking',),
+        ann_file=data_root + 'annotations/train.json',
+        img_prefix=data_root + 'images/train',
         pipeline=train_pipeline),
     val=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/aitodv2_test.json',
-        img_prefix=data_root + 'images/test/',
+        classes=('smoking',),
+        ann_file=data_root + 'annotations/val.json',
+        img_prefix=data_root + 'images/val',
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/aitodv2_test.json',
-        img_prefix=data_root + 'images/test/',
+        classes=('smoking',),
+        ann_file=data_root + 'annotations/val.json',
+        img_prefix=data_root + 'images/val',
         pipeline=test_pipeline))
-evaluation = dict(interval=12, metric='bbox')
+evaluation = dict(interval=1, metric='bbox')

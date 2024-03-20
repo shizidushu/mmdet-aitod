@@ -647,3 +647,18 @@ class CocoDataset(CustomDataset):
         if tmp_dir is not None:
             tmp_dir.cleanup()
         return eval_results
+
+
+@DATASETS.register_module()
+class SmokingDataset(CocoDataset):
+    """Customized Dataset for COCO detection format."""
+    
+    CLASSES = ('smoking',)
+    
+    PALETTE = [(220, 20, 60)]
+
+    # METAINFO = {
+    #     'classes': (
+    #         'smoking'
+    #     )
+    # }

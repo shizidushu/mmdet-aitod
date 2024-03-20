@@ -73,6 +73,8 @@ class LoadImageFromFile:
         results['filename'] = filename
         results['ori_filename'] = results['img_info']['filename']
         results['img'] = img
+        if img is None or img.shape is None:
+            print(f"==========================={filename} shape is None!")
         results['img_shape'] = img.shape
         results['ori_shape'] = img.shape
         results['img_fields'] = ['img']
