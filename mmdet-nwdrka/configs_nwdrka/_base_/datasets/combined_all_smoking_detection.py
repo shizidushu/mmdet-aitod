@@ -1,6 +1,6 @@
 # dataset settings
 dataset_type = 'AITODv2Dataset'
-data_root = '/mnt/d/0-Datasets/private/smoking/combined_all_smoking/exported_coco/'
+data_root = 'data/combined_all_smoking/'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 train_pipeline = [

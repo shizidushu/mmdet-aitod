@@ -2,7 +2,12 @@
 # 训练
 ```bash
 cd mmdet-nwdrka
+
+python tools/train.py configs_nwdrka/nwd_rka/aitodv2_faster_r50_nwdrka_1x.py
+
 python tools/train.py configs_nwdrka/nwd_rka/smoking_194_faster_r50_nwdrka_200.py
+
+python tools/train.py configs_nwdrka/nwd_rka/combined_all_smoking_retinanet_r50_nwdrka_1x_v2.py
 ```
 
 
